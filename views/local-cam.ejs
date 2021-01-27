@@ -1,0 +1,26 @@
+<div ng-controller="LocalStreamController as localStream">
+	<div class="top">
+		<label class="none" id="greeting">Welcome! </label><span id="username"></span><span id="flag" style="display:none;"></span>
+	</div>
+	<div class="localStream">	
+		<div class="container">
+			<video class="VideosContainer"  id="localVideo"  muted="muted" autoplay="true"></video>
+			<li ng-click="localStream.toggleCam()" class="index-btn">
+				<a href>Start</a>
+			</li>
+			<textarea cols='42' rows='20' id='panel' readonly></textarea><br>
+			<form id='form2' name='form2'>
+				<input type='text' size='38' id='msg' placeholder="傳送訊息"><input type='submit' value='聊天' id='sendMsg'>
+			</form>
+		</div>
+	</div>
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>      
+			<p>請先輸入您的暱稱，好讓大家記住你!</p><input type="text" id="nickname">
+			<input type="submit" id="sendName" value="確認"><br><br>
+			<span id="invalidName" style="color: red;"></span>
+		</div>
+	</div>
+</div>
+	
